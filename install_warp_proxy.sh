@@ -476,7 +476,7 @@ function step_install_pkgs() {
 function step_create_command() {
   {
     mkdir -p /etc/wireguard
-    wget -N -P /etc/wireguard https://gitlab.com/fscarmen/warp/-/raw/main/menu.sh
+    wget -N -P /etc/wireguard https://raw.githubusercontent.com/xxf185/x-ui-scripts/main/menu.sh
     chmod +x /etc/wireguard/menu.sh
     ln -sf /etc/wireguard/menu.sh /usr/bin/warp
   }
