@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-AUTHOR="[hamid-gh98](https://github.com/hamid-gh98)"
+AUTHOR="[xxf185](https://github.com/xxf185)"
 VERSION="1.2.0"
 
 
@@ -16,7 +16,7 @@ VERSION="1.2.0"
 #   This script installs Warp Socks5 Proxy (WireProxy) for your system.
 #   WireProxy is a secure and fast proxy service that routes your network traffic through Cloudflare's global network.
 # 
-# Author: [hamid-gh98](https://github.com/hamid-gh98)
+# Author: [xxf185](https://github.com/xxf185)
 # 
 # Usage: bash ./install-warp-proxy.sh [-y] [-f]
 # 
@@ -42,9 +42,9 @@ VERSION="1.2.0"
 #   8. Rocky
 # 
 # One-Line Command for installation: (use of this commands)
-#   not-forced: `curl -fsSL https://raw.githubusercontent.com/hamid-gh98/x-ui-scripts/main/install_warp_proxy.sh | bash`
-#   not-forced: `bash <(curl -sSL https://raw.githubusercontent.com/hamid-gh98/x-ui-scripts/main/install_warp_proxy.sh)`
-#   forced: `bash <(curl -sSL https://raw.githubusercontent.com/hamid-gh98/x-ui-scripts/main/install_warp_proxy.sh) -yf`
+#   not-forced: `curl -fsSL https://raw.githubusercontent.com/xxf185/x-ui-scripts/main/install_warp_proxy.sh | bash`
+#   not-forced: `bash <(curl -sSL https://raw.githubusercontent.com/xxf185/x-ui-scripts/main/install_warp_proxy.sh)`
+#   forced: `bash <(curl -sSL https://raw.githubusercontent.com/xxf185/x-ui-scripts/main/install_warp_proxy.sh) -yf`
 # 
 
 
@@ -104,9 +104,9 @@ PKG_INSTALL=("apt -y --fix-broken install" "apt -y --fix-broken install" "yum -y
 # ===============================
 declare -A T
 # base
-T[000]="Option requires an argument:"
-T[001]="Invalid option:"
-T[002]="Invalid choice."
+T[000]="选项需要参数:"
+T[001]="无效选项:"
+T[002]="选择无效."
 T[003]=""
 T[004]=""
 T[005]="[INFO]"
@@ -115,20 +115,20 @@ T[007]="[ERROR]"
 T[008]="[DEBUG]"
 T[009]="[WARNING]"
 # intro
-T[010]="Thanks for using this script to install warp. \n  Please give a star on github if you find this script useful!"
-T[011]="Version:"
-T[012]="Author:"
+T[010]="感谢您使用此脚本来安装 warp. \n  如果您觉得这个脚本有用，请在 github 上给一个 star!"
+T[011]="版本:"
+T[012]="作者:"
 T[013]=""
-T[014]="Options:"
-T[015]="Accept default values."
-T[016]="Force reinstall Warp Socks5 Proxy (WireProxy)."
+T[014]="选项:"
+T[015]="接受默认值。"
+T[016]="强制重新安装 Warp Socks5 代理 (WireProxy)。"
 T[017]=""
 T[018]=""
 T[019]=""
-T[020]="Useful Commands:"
-T[021]="Uninstall Warp"
-T[022]="Change Warp Account Type (free, plus, ...)"
-T[023]="Turn on/off WireProxy"
+T[020]="有用的命令:"
+T[021]="卸载Warp"
+T[022]="更改 Warp 帐户类型（免费、附加……）"
+T[023]="打开/关闭 WireProxy"
 T[024]=""
 T[025]=""
 T[026]=""
@@ -146,9 +146,9 @@ T[037]=""
 T[038]=""
 T[039]=""
 # show_warnings
-T[040]="You're using this options:"
-T[041]="Accepting default values"
-T[042]="Forcing reinstall Warp Socks5 Proxy (WireProxy)"
+T[040]="您正在使用此选项:"
+T[041]="接受默认值"
+T[042]="强制重新安装 Warp Socks5 Proxy (WireProxy)"
 T[043]=""
 T[044]=""
 T[045]=""
@@ -157,52 +157,52 @@ T[047]=""
 T[048]=""
 T[049]=""
 # prompts
-T[050]="Default"
-T[051]="Exceeded maximum attempts. Exiting..."
-T[052]="Remaining attempts:"
-T[053]="Last attempt! Remaining attempt:"
-T[054]="Please enter a port for"
-T[055]="Oops! Invalid input. Please enter a port between 1 and 65535."
-T[056]="Oops! The port is already in use. Please choose another port between 1 and 65535!"
+T[050]="默认"
+T[051]="超过最大尝试次数。 正在退出..."
+T[052]="剩余尝试次数:"
+T[053]="最后一次尝试！ 剩余尝试:"
+T[054]="请输入端口"
+T[055]="哎呀！ 输入无效。 请输入 1 到 65535 之间的端口。"
+T[056]="哎呀！ 该端口已被使用。 请选择 1 到 65535 之间的其他端口！"
 T[057]="WireProxy"
 T[058]=""
 T[059]=""
 # check_root
-T[060]="Verifying root access..."
-T[061]="Please run this script as root!"
-T[062]="Great News! You have Superuser privileges. Let's continue..."
+T[060]="正在验证 root访问权限..."
+T[061]="请以 root用户运行此脚本！"
+T[062]="好消息！已是root用户.继续.."
 # check_os
-T[063]="Verifying if your OS is supported..."
-T[064]="Unfortunately, your OS is not supported at this time! \n  The script supports Debian, Ubuntu, CentOS, Arch or Alpine systems only.\n"
-T[065]="Your os is compatible with this installation. Moving forward..."
+T[063]="正在验证您的操作系统是否受支持..."
+T[064]="不支持您的操作系统! \n  该脚本仅支持 Debian、Ubuntu、CentOS、Arch 或 Alpine 系统.\n"
+T[065]="您的操作系统与此安装兼容。继续..."
 # install_base_packages
-T[066]="Installing essential packages for your OS..."
-T[067]="There was an error during the installation of essential packages! \n  Please check your connection or try again later."
-T[068]="All required packages have been successfully installed."
+T[066]="正在为您的操作系统安装必要的软件包..."
+T[067]="安装软件包时出错！ \n  请检查您的连接或稍后重试。"
+T[068]="所有必需的软件包已成功安装。"
 # warp_command
-T[069]="Checking if [warp] command shortcut exists, and creating it if necessary..."
-T[070]="Failed to create [warp] command shortcut! Please try again later."
-T[071]="[warp] command shortcut created successfully."
-T[072]="[warp] command shortcut is already set up."
+T[069]="检查 [warp] 命令快捷方式是否存在，并在必要时创建它..."
+T[070]="创建[warp]命令快捷方式失败！ 请稍后再试。"
+T[071]="[warp] 命令快捷方式创建成功。"
+T[072]="[warp] 命令快捷方式已设置。"
 # warp_status
-T[073]="Checking WARP Status..."
-T[074]="The WARP socks5 proxy (WireProxy) is already installed and currently running. \n  WARP is listening on socks5://127.0.0.1:"
-T[075]="The WARP socks5 proxy (WireProxy) has already been installed, but it's currently not running."
-T[076]="The WARP socks5 proxy (WireProxy) isn't installed yet. No worries, we'll take care of it."
+T[073]="查看 WARP 状态..."
+T[074]="WARPocks5 代理 (WireProxy) 已安装并当前正在运行。 \n WARP 正在socks5://127.0.0.1 上监听："
+T[075]="WARP sock5 代理 (WireProxy) 已安装，但当前未运行。"
+T[076]="尚未安装 WARPocks5 代理 (WireProxy)"
 # install_warp
-T[077]="Installing WARP socks5 proxy (WireProxy)..."
-T[078]="Sorry, the installation of WARP socks5 proxy (WireProxy) failed! Please try again later."
-T[079]="You're all set! WARP socks5 proxy (WireProxy) has been installed and is ready to use. \n  WARP is listening on socks5://127.0.0.1:"
+T[077]="正在安装 WARPocks5 代理 (WireProxy)..."
+T[078]="WARPocks5 代理 (WireProxy)安装失败！ 请稍后再试。"
+T[079]=" WARPocks5代理（WireProxy）已安装并可以使用。 \n WARP 正在socks5://127.0.0.1 上监听："
 # start_warp
-T[080]="Activating the WARP socks5 proxy (WireProxy)..."
-T[081]="The WARP socks5 proxy (WireProxy) failed to start! Please try again later."
-T[082]="The WARP socks5 proxy (WireProxy) is active and listening on socks5://127.0.0.1:"
+T[080]="激活 WARPocks5 代理 (WireProxy)..."
+T[081]="WARPocks5代理（WireProxy）启动失败！ 请稍后再试。"
+T[082]="WARP sock5 代理 (WireProxy) 处于活动状态并正在监听ocks5://127.0.0.1："
 # confirm reinstall_warp
-T[083]="Do you want to proceed with reinstalling the WARP socks5 proxy?"
+T[083]="重新安装 WARPocks5 代理吗?"
 # reinstall_warp
-T[084]="Performing a fresh installation of WARP socks5 proxy (WireProxy)..."
-T[085]="Sorry, the reinstallation of WARP socks5 proxy (WireProxy) failed! Please try again later."
-T[086]="Completed! WARP socks5 proxy (WireProxy) has been reinstalled and is ready to use. \n  WARP is listening on socks5://127.0.0.1:"
+T[084]="正在执行 WARPocks5 代理 (WireProxy) 的全新安装..."
+T[085]="WARPocks5 代理 (WireProxy)安装失败！ 请稍后再试。"
+T[086]="WARPocks5代理（WireProxy）已重新安装并可以使用。 \n WARP 正在socks5://127.0.0.1 上监听："
 T[087]=""
 T[088]=""
 T[089]=""
